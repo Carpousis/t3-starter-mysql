@@ -5,9 +5,14 @@ export default function Home() {
     const { isLoaded } = useLoadScript({
         googleMapsApitKey: process.env.NEXT_PUBLIC_API_KEY,
     });
-    if (!isLoaded) 
-        return <div>Skating around...</div>;
-            return <Map />;
+if (!isLoaded) {
+    return (
+        <div>
+            Skating around...
+        </div>
+    )
+}
+        return <Map />;
 }
 
 function Map() {
